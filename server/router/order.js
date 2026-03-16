@@ -1,6 +1,6 @@
 const express = require('express');
-const { createUserOrder, getUserOrder } = require('../controllers/Order');
 const authorise = require('../middlewares/authorise');
+const { createUserOrder, getUserOrder } = require('../controllers/order');
 const router = express.Router();
 
 router.post('/create-order', authorise, createUserOrder);
