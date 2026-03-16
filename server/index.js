@@ -9,7 +9,7 @@ const port = process.env.PORT;
 app.use(cookieParser());
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173', 'https://book-store-9joj.vercel.app'],
     credentials: true
 }));
 app.use(express.json());
