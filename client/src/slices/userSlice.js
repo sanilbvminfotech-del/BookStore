@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { editUserFirstName, getUserObjectForChange, loginUser, logoutUser, registerUser, updateProfile, userProfile } from "../Axios/axiosInstance";
 
 
+
 export const registerUserAPI = createAsyncThunk('user/registerUserAPI', async (formData, { rejectWithValue }) => {
     try {
         const res = await registerUser(formData);
