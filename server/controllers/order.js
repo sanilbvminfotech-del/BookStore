@@ -30,7 +30,7 @@ const createUserOrder = async (req, res) => {
                 bookImage: item.book?.bookImage,
                 stock: item.book?.stock
             })
-            // await Book.findByIdAndUpdate(item.book._id, { $inc: { stock: -item.quantity } }, { new: true })
+            await Book.findByIdAndUpdate(item.book._id, { $inc: { stock: -item.quantity } }, { new: true })
         }
 
 
@@ -38,7 +38,7 @@ const createUserOrder = async (req, res) => {
 
         const order = await Order.create({ user: userId, items: orderItems, totalAmount: totalPrice })
 
-        // const fullOrderDetails = await Order.findById(order._id).populate('user', 'username email image').populate('items.book', 'title author description price bookImage').lean()
+        const fullOrderDetails = await Order.findById(order._id).populate('user', 'username email image').populate('items.book', 'title author description price bookImage').lean()
 
         await order.save();
 
@@ -46,7 +46,7 @@ const createUserOrder = async (req, res) => {
 
         const updateduserDetails = await Order.findByIdAndUpdate(order._id, { $set: { shippingAddress: address._id } }, { new: true }).populate('user').populate('items.book').populate('shippingAddress');
 
-        // await Cart.findOneAndUpdate({ user: userId }, { $set: { items: [] } }, { new: true });
+        await Cart.findOneAndUpdate({ user: userId }, { $set: { items: [] } }, { new: true });
 
         return res.status(200).json({ status: true, data: updateduserDetails, message: 'checkout successfully!' });
     } catch (error) {
