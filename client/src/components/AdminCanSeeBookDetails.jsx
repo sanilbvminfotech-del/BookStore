@@ -66,13 +66,13 @@ function AdminCanSeeBookDetails() {
                         </div>
                     </div>
                 ) : (
-                    <div className="group flex items-center gap-6">
-                        <div className={`${style}  text-gray-900 tracking-tight leading-tight group-hover:text-emerald-600 transition-colors`}>
+                    <div className="group flex items-center gap-6 ">
+                        <div className={`${style} text-gray-900 tracking-tight leading-tight group-hover:text-emerald-600 transition-colors`}>
                             {value}
                         </div>
-                        <button
+                        <button 
                             onClick={() => dispatch(clickOnEditButtonAdmin({ fieldName, value }))}
-                            className="opacity-0 group-hover:opacity-100 p-3 bg-emerald-50 text-emerald-600 rounded-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-sm"
+                            className="opacity-0 group-hover:opacity-100 p-3 bg-emerald-50 text-emerald-600 rounded-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-sm "
                         >
                             <FaEdit size={18} />
                         </button>
@@ -84,7 +84,7 @@ function AdminCanSeeBookDetails() {
 
 
     return (
-        <div className="p-4 md:p-10 bg-gray-50 min-h-screen font-sans ">
+        <div className="p-4 md:p-10 bg-gray-50 min-h-screen font-sans">
             <div className="max-w-6xl mx-auto mb-8">
                 <button
                     onClick={() => navigate(-1)}
@@ -124,8 +124,8 @@ function AdminCanSeeBookDetails() {
                         <div className="mb-8 border-b border-gray-50 pb-8">
                             <div className="flex justify-between items-start mb-4">
                                 <span className="text-[10px] flex font-black text-emerald-600 uppercase tracking-[0.3em]">
-                                    {/* {bookDetail.category} • {bookDetail.genre} */}
-                                    {renderFieldForAdmin('category', bookDetail?.category, "text-xs font-slim")} • {renderFieldForAdmin('genre', bookDetail?.genre, "text-xs font-slim")}
+                                    {bookDetail.category} • {bookDetail.genre}
+                                    {/* {renderFieldForAdmin('category', bookDetail?.category, "text-xs font-slim")} • {renderFieldForAdmin('genre', bookDetail?.genre, "text-xs font-slim")} */}
                                 </span>
                                 <span className="text-[10px] font-bold text-gray-300">ID: {bookDetail.bookID}</span>
                             </div>
@@ -143,8 +143,8 @@ function AdminCanSeeBookDetails() {
                                 </span>
                             </div> */}
 
-                            <div className="min-h-[80px] flex items-center mb-4">
-                                {renderFieldForAdmin('title', bookDetail?.title, "text-4xl font-black")}
+                            <div className="min-h-20 flex items-center mb-4">
+                                {renderFieldForAdmin('title', bookDetail?.title, "text-4xl font-black ")}
                                 {/* <EditableField id={id} dispatch={dispatch} inputTitle={inputTitle} isEditing={editingField === 'title'} fieldName="title" value={bookDetail?.title} style="text-[10px] uppercase tracking-widest text-emerald-600" /> */}
                             </div>
 
@@ -155,15 +155,18 @@ function AdminCanSeeBookDetails() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
                             <div className="p-5 bg-emerald-50 rounded-3xl border border-emerald-100">
                                 <p className="text-[9px] font-black text-emerald-400 uppercase mb-1 tracking-widest">Pricing</p>
-                                <div className="flex items-baseline gap-2">
-                                    <div className="text-2xl font-black text-emerald-700 font-mono">₹
+                                <div className="flex items-baseline gap-2 relative">
+                                    <div className="text-xl font-black text-emerald-700 font-mono">
+                                        <span className=''>₹</span>
                                         {/* {bookDetail.price} */}
                                         {renderFieldForAdmin('price', bookDetail?.price, "text-sm font-black")}
                                     </div>
-                                    {bookDetail.oldPrice && <p className="text-xs text-emerald-300 line-through">₹{bookDetail.oldPrice}</p>}
+                                    <div className=' absolute right-0'>
+                                        {bookDetail.oldPrice && <p className="text-xs text-emerald-300 line-through">₹{bookDetail.oldPrice}</p>}
+                                    </div>
                                     {/* {renderFieldForAdmin('oldPrice', bookDetail?.oldPrice, "text-sm font-black line-through")} */}
                                 </div>
                             </div>
