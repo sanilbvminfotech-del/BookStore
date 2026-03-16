@@ -21,7 +21,7 @@ function ForgotPassword() {
   const userValidationCheck = async () => {
     console.log('hello');
 
-    const res = await fetch(`http://localhost:8000/api/auth/forgotpassword/${id}/${token}`, {
+    const res = await fetch(`https://bookstore-ybgj.onrender.com/api/auth/forgotpassword/${id}/${token}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -60,7 +60,7 @@ function ForgotPassword() {
       await validationSchema.validate({ password }, { abortEarly: false });
       setErrors({});
 
-      const res = await fetch(`http://localhost:8000/api/auth/change-new-password/${id}/${token}`, {
+      const res = await fetch(`https://bookstore-ybgj.onrender.com/api/auth/change-new-password/${id}/${token}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

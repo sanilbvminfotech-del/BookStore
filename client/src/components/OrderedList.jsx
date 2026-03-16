@@ -61,7 +61,7 @@ function OrderedList() {
                                         <div key={item._id} className="py-4 first:pt-0 last:pb-0 flex items-center gap-6">
                                             <div className="w-16 h-20 bg-gray-50 rounded-xl flex-shrink-0 p-2 border border-gray-100">
                                                 <img
-                                                    src={`http://localhost:8000/image/bookImage/${item.book?.Image}`}
+                                                    src={`https://bookstore-ybgj.onrender.com/image/bookImage/${item.book?.Image}`}
                                                     alt={item.book?.title}
                                                     className="w-full h-full object-contain"
                                                 />

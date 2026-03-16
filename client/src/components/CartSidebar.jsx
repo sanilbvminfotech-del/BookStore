@@ -84,7 +84,7 @@ function CartSidebar() {
                         <div key={item.book?._id} className="flex gap-4 mb-4">
 
                             <img
-                                src={`http://localhost:8000/image/bookImage/${item.book?.bookImage}`}
+                                src={`https://bookstore-ybgj.onrender.com/image/bookImage/${item.book?.bookImage}`}
                                 className="w-16 h-20 object-contain"
                             />
 

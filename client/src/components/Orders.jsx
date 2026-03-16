@@ -55,7 +55,7 @@ function Orders() {
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="w-24 h-32 bg-gray-50 rounded-2xl overflow-hidden flex-shrink-0 p-2 border border-gray-50 shadow-inner">
                   <img
-                    src={`http://localhost:8000/image/bookImage/${item.book?.Image}`}
+                    src={`https://bookstore-ybgj.onrender.com/image/bookImage/${item.book?.Image}`}
                     alt={item.book?.title}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />

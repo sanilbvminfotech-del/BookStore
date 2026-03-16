@@ -79,7 +79,7 @@ function AdminCanSeeBookDetails() {
                 {/* Image Section */}
                 <div className="lg:w-2/5 bg-gray-50 p-10 flex justify-center items-center relative border-r">
                     <div className="relative group">
-                        <img src={`http://localhost:8000/image/bookImage/${bookDetail.bookImage}`} className="w-full max-w-sm rounded-3xl shadow-2xl transition-transform group-hover:scale-[1.02]" alt="Cover" />
+                        <img src={`https://bookstore-ybgj.onrender.com/image/bookImage/${bookDetail.bookImage}`} className="w-full max-w-sm rounded-3xl shadow-2xl transition-transform group-hover:scale-[1.02]" alt="Cover" />
                         <div className="absolute -top-3 -right-3 flex flex-col gap-2">
                             <span className={`px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg ${bookDetail.isDeleted ? 'bg-red-500 text-white' : 'bg-emerald-500 text-white'}`}>{bookDetail.isDeleted ? 'Hidden' : 'Active'}</span>
                             {bookDetail.trending && <span className="bg-amber-500 text-white px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-lg flex items-center gap-2"><FaFire /> Trending</span>}

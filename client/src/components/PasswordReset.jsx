@@ -28,7 +28,7 @@ function PasswordReset() {
             await validationSchema.validate({ email }, { abortEarly: false });
             setErrors({});
 
-            const res = await fetch('http://localhost:8000/api/auth/sendpasswordlink', {
+            const res = await fetch('https://bookstore-ybgj.onrender.com/api/auth/sendpasswordlink', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

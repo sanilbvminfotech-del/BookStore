@@ -73,7 +73,7 @@ function BookDetail() {
 
                     <div className="bg-slate-50 p-12 flex items-center justify-center border-r border-gray-100">
                         <img
-                            src={`http://localhost:8000/image/bookImage/${isSingle?.bookImage}`}
+                            src={`https://bookstore-ybgj.onrender.com/image/bookImage/${isSingle?.bookImage}`}
                             alt={isSingle.title}
                             className="max-h-[500px] w-auto shadow-2xl rounded-lg transform hover:scale-105 transition-transform duration-500"
                         />

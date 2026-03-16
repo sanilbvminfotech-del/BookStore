@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 import { FaMapMarkerAlt, FaTruck, FaShieldAlt, FaChevronLeft } from 'react-icons/fa';
 import { clearCart, getCartDetailsAPI } from '../slices/cartSlice';
-import { API } from '../Axios/axiosCreate';
 import { userProfileAPI } from '../slices/userSlice';
 import axios from 'axios';
 import { createUserOrderDetailAPI } from '../slices/orderSlice';
@@ -176,7 +175,7 @@ function Checkout() {
                                 <div key={item.book?._id} className="flex justify-between items-center gap-4">
                                     <div className="flex items-center gap-3">
                                         <div className="w-10 h-12 bg-gray-50 rounded-lg flex-shrink-0">
-                                            <img src={`http://localhost:8000/image/bookImage/${item.book?.Image}`} className="w-full h-full object-contain p-1" alt="" />
+                                            <img src={`https://bookstore-ybgj.onrender.com/image/bookImage/${item.book?.Image}`} className="w-full h-full object-contain p-1" alt="" />
                                         </div>
                                         <p className="text-sm font-bold text-gray-700 truncate w-32">{item.book?.title}</p>
                                     </div>

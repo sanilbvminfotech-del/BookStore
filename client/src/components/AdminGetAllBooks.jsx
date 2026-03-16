@@ -57,7 +57,7 @@ function AdminGetAllBooks() {
                     >
                         <div className="relative h-56 overflow-hidden bg-gray-100">
                             {book.bookImage ? (
-                                <img src={`http://localhost:8000/image/bookImage/${book.bookImage}`} alt={book.title}
+                                <img src={`https://bookstore-ybgj.onrender.com/image/bookImage/${book.bookImage}`} alt={book.title}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 "
                                 />
                             ) : (

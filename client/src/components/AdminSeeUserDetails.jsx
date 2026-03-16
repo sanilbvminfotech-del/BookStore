@@ -42,7 +42,7 @@ const AdminSeeUserDetails = () => {
           <div className="px-8 pb-10">
             <div className="relative flex flex-col md:flex-row items-end gap-6 -mt-16 border-b pb-8">
               <img
-                src={`http://localhost:8000/image/userImage/${user.image}`}
+                src={`https://bookstore-ybgj.onrender.com/image/userImage/${user.image}`}
                 className="h-40 w-40 rounded-2xl border-8 border-white shadow-lg object-cover bg-gray-200"
                 alt="User Avatar"
               />

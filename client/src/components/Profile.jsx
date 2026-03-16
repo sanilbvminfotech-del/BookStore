@@ -51,7 +51,7 @@ function Profile() {
                         <div className="bg-emerald-600 h-32 md:h-40 relative">
                             <div className="absolute -bottom-12 left-8">
                                 <Avatar
-                                    src={`http://localhost:8000/image/userImage/${userData.image}`}
+                                    src={`https://bookstore-ybgj.onrender.com/image/userImage/${userData.image}`}
                                     sx={{ width: 100, height: 100, border: '4px solid white', bgcolor: '#10b981' }}
                                     className="shadow-md text-3xl"
                                 >

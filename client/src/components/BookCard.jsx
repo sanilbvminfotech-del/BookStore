@@ -7,7 +7,7 @@ export const BookCard = React.memo(({ book, quantity, isThisCardLoading, handleC
     return (
         <Link key={book._id} to={`/book-detail/${book._id}`} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
             <div className="h-64 bg-gray-100 flex items-center justify-center p-4">
-                <img src={`http://localhost:8000/image/bookImage/${book.bookImage}`} alt={book.title} className="h-full object-contain" />
+                <img src={`https://bookstore-ybgj.onrender.com/image/bookImage/${book.bookImage}`} alt={book.title} className="h-full object-contain" />
             </div>
             <div className="p-5">
                 <h3 className="font-bold text-gray-900 truncate">{book.title}</h3>

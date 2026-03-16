@@ -103,7 +103,7 @@ function AdminCanSeeBookDetails() {
                     <div className="lg:w-2/5 bg-gray-100 p-8 flex justify-center items-center relative">
                         <div className="relative group w-full max-w-sm">
                             <img
-                                src={`http://localhost:8000/image/bookImage/${bookDetail.bookImage}`}
+                                src={`https://bookstore-ybgj.onrender.com/image/bookImage/${bookDetail.bookImage}`}
                                 alt={bookDetail.title}
                                 className="w-full rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] object-cover transform transition-transform duration-500 group-hover:scale-105"
                             />
