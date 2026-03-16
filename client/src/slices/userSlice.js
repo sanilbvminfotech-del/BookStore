@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { editUserFirstName, getUserObjectForChange, loginUser, logoutUser, registerUser, updateProfile, userProfile } from "../Axios/axiosInstance";
+import { editUserFirstName, getUserObjectForChange, loginUser, logoutUser, registerUser, updateProfile, userProfile } from "../axios/axiosInstance";
 
 
 
