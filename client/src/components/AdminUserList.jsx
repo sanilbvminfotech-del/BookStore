@@ -111,7 +111,7 @@ const AdminUserList = () => {
                                     >
                                         <td className="py-4 px-8">
                                             <img
-                                                src={user.image ? `https://bookstore-ybgj.onrender.com/image/userImage/${user.image}` : `https://ui-avatars.com${user.username}`}
+                                                src={user.image ? `https://bookstore-ybgj.onrender.com/image/UserImage/${user.image}` : `https://ui-avatars.com${user.username}`}
                                                 alt="user"
                                                 className="h-12 w-12 rounded-2xl object-cover border-2 border-white shadow-md group-hover:scale-105 transition-transform"
                                             />

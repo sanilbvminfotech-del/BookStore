@@ -8,7 +8,7 @@ function AdminGetAllBooks() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { books, isLoading } = useSelector(state => state.admin);
-    console.log('AdminGetAllBooks');
+    console.log(books, 'books-books');
 
     const handleBookDetailsShow = (e, bookId) => {
         e.stopPropagation();
