@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { createUserOrderDetail, getUserOrderedWithDetails } from "../Axios/axiosInstance";
+import { createUserOrderDetail, getUserOrderedWithDetails } from "../axios/axiosInstance";
 
 
 

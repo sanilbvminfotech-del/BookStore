@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { adminCanDisabledUserForLogin, adminCanSeeAllBooks, adminCanSeeSingleBookDetails, adminCanSeeUserFullDetails, adminCansoftDeleteBook, editTitleAdmin, getAllUserListAdmin } from "../Axios/axiosInstance";
+import { adminCanDisabledUserForLogin, adminCanSeeAllBooks, adminCanSeeSingleBookDetails, adminCanSeeUserFullDetails, adminCansoftDeleteBook, editTitleAdmin, getAllUserListAdmin } from "../axios/axiosInstance";
 
 
 // user

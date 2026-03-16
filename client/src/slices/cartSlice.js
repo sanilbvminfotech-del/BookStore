@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { clearAllItemsFromCart, decrementCartItem, getCartDetails, incrementCartItem, removeItemFromCart } from "../Axios/axiosInstance";
+import { clearAllItemsFromCart, decrementCartItem, getCartDetails, incrementCartItem, removeItemFromCart } from "../axios/axiosInstance";
 
 
 export const incrementCartItemAPI = createAsyncThunk('cart/incrementCartItemAPI', async ({ id, addLot }, { rejectWithValue }) => {

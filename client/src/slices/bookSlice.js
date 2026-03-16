@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getAllBooks, getSelectedBookDetails } from "../Axios/axiosInstance";
+import { getAllBooks, getSelectedBookDetails } from "../axios/axiosInstance";
+
 
 
 export const getAllBooksAdminAPI = createAsyncThunk('user/getAllBooksAdminAPI', async (_, { rejectWithValue }) => {
