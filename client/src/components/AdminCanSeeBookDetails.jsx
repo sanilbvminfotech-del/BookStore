@@ -66,17 +66,17 @@ function AdminCanSeeBookDetails() {
                         </div>
                     </div>
                 ) : (
-                    <div className="group flex items-center gap-6 ">
-                        <div className={`${style} text-gray-900 tracking-tight leading-tight group-hover:text-emerald-600 transition-colors`}>
+                    <span className="group flex items-center gap-6 ">
+                        <span className={`${style} text-gray-900 tracking-tight leading-tight group-hover:text-emerald-600 transition-colors`}>
                             {value}
-                        </div>
-                        <button 
+                        </span>
+                        <button
                             onClick={() => dispatch(clickOnEditButtonAdmin({ fieldName, value }))}
-                            className="opacity-0 group-hover:opacity-100 p-3 bg-emerald-50 text-emerald-600 rounded-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-sm "
+                            className="opacity-0 group-hover:opacity-100 p-2 bg-emerald-50 text-emerald-600 rounded-md hover:bg-emerald-600 hover:text-white transition-all duration-300 shadow-sm text-sm md:text-md lg:text-lg"
                         >
-                            <FaEdit size={18} />
+                            <FaEdit />
                         </button>
-                    </div>
+                    </span>
                 )}
             </div>
         )
@@ -143,8 +143,8 @@ function AdminCanSeeBookDetails() {
                                 </span>
                             </div> */}
 
-                            <div className="min-h-20 flex items-center mb-4">
-                                {renderFieldForAdmin('title', bookDetail?.title, "text-4xl font-black ")}
+                            <div className="min-h-20 flex items-center mb-4 ">
+                                {renderFieldForAdmin('title', bookDetail?.title, "text-xl font-black md:text-2xl lg:text-4xl")}
                                 {/* <EditableField id={id} dispatch={dispatch} inputTitle={inputTitle} isEditing={editingField === 'title'} fieldName="title" value={bookDetail?.title} style="text-[10px] uppercase tracking-widest text-emerald-600" /> */}
                             </div>
 
@@ -162,7 +162,7 @@ function AdminCanSeeBookDetails() {
                                     <div className="text-xl font-black text-emerald-700 font-mono">
                                         <span className=''>₹</span>
                                         {/* {bookDetail.price} */}
-                                        {renderFieldForAdmin('price', bookDetail?.price, "text-sm font-black")}
+                                        {renderFieldForAdmin('price', bookDetail?.price, '')}
                                     </div>
                                     <div className=' absolute right-0'>
                                         {bookDetail.oldPrice && <p className="text-xs text-emerald-300 line-through">₹{bookDetail.oldPrice}</p>}
@@ -180,9 +180,9 @@ function AdminCanSeeBookDetails() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="p-5 bg-blue-50 rounded-3xl border border-blue-100 text-right">
+                            <div className="p-5 bg-blue-50 rounded-3xl border border-blue-100 text-center">
                                 <p className="text-[9px] font-black text-blue-400 uppercase mb-1 tracking-widest">Stock</p>
-                                <div className={`text-2xl font-black ${bookDetail.stock < 10 ? "text-red-600" : "text-blue-700"}`}>
+                                <div className={`text-xl font-black ${bookDetail.stock < 10 ? "text-red-600" : "text-blue-700"}`}>
                                     {/* {bookDetail.stock} */}
                                     {renderFieldForAdmin('stock', bookDetail?.stock, "text-sm font-slim")}
                                 </div>
