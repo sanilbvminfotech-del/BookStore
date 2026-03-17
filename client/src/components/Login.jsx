@@ -89,9 +89,10 @@ function Login() {
               onChange={handleChange}
               value={formData.email}
             />
-            <div className="relative">
+            <div className="relative ">
               <TextField
                 fullWidth
+                className="z-10 p-10 border"
                 autoComplete="true"
                 variant="outlined"
                 error={!!errors.password}
@@ -103,8 +104,8 @@ function Login() {
                 onChange={handleChange}
                 value={formData.password}
               />
-              <span onClick={() => setOpenEye(!openEye)} className="absolute top-0 right-0 h-full  w-10">
-                {openEye ? <FaEye className=" top-0 right-6  h-full w-5 " /> : <FaEyeSlash  className=" top-0 right-6  h-full w-5 " />}
+              <span onClick={() => setOpenEye(!openEye)} className="absolute top-1 right-1 bg-white h-10/12 z-11 w-10 items-center justify-center flex">
+                {openEye ? <FaEye className=" top-0 right-6  h-full w-5" /> : <FaEyeSlash  className=" top-0 right-6  h-full w-5 " />}
               </span>
             </div>
           </div>
