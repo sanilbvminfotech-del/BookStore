@@ -131,12 +131,6 @@ function Home() {
             <div>
               <h2 className="text-5xl font-black text-gray-900 mb-8 leading-tight">What Our <span className="text-emerald-600 italic">Community</span> Says</h2>
               <p className="text-gray-500 font-medium text-lg mb-10">Don't just take our word for it. Join thousands of happy readers worldwide.</p>
-              <div className="flex -space-x-4 mb-4">
-                {[1, 2, 3, 4, 5].map(i => (
-                  <div key={i} className="h-14 w-14 rounded-full border-4 border-white bg-gray-200"></div>
-                ))}
-                <div className="h-14 w-14 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">+10k</div>
-              </div>
             </div>
             <div className="bg-emerald-900 rounded-[3rem] p-12 text-white shadow-2xl relative">
               <div className="absolute -top-6 -left-6 bg-emerald-400 text-emerald-900 h-16 w-16 flex items-center justify-center text-4xl font-serif rounded-2xl shadow-xl">“</div>

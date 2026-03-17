@@ -9,7 +9,7 @@ const incrementBackend = async (req, res) => {
         const { id } = req.params;
         console.log(id,'sssssssssssss');
 
-        await new Promise((resolve) => setTimeout(resolve, 350));
+        // await new Promise((resolve) => setTimeout(resolve, 350));
 
         const book = await Book.findOne({ _id: id, isDeleted: false });
         if (!book) {
@@ -44,7 +44,7 @@ const decrementBackend = async (req, res) => {
         const userId = req.user._id;
         const { id } = req.params;
 
-        await new Promise((resolve) => setTimeout(resolve, 350));
+        // await new Promise((resolve) => setTimeout(resolve, 350));
         let cart = await Cart.findOne({ user: userId });
         if (!cart) {
             return res.status(404).json({ status: false, message: 'cart not found!' });

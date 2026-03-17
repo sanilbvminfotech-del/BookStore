@@ -85,10 +85,10 @@ function BookDetail() {
                             {isSingle.category || isSingle.genres}
                         </span>
 
-                        <h1 className="text-4xl font-black text-gray-900 leading-tight mb-2">
+                        <h1 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-tight mb-2">
                             {isSingle.title}
                         </h1>
-                        <p className="text-xl text-gray-400 font-medium mb-4 italic">By {isSingle.author}</p>
+                        <p className="text-lg text-gray-400 font-medium mb-4 italic">By {isSingle.author}</p>
 
                         <div className="flex items-center gap-4 mb-6">
                             <Rating value={Number(isSingle.rating) || 0} precision={0.5} readOnly />
@@ -102,9 +102,9 @@ function BookDetail() {
                         </p>
 
                         <div className="flex items-center gap-4 mb-10">
-                            <span className="text-5xl font-black text-gray-900">₹{isSingle.price}</span>
+                            <span className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900">₹{isSingle.price}</span>
                             {isSingle.oldPrice && (
-                                <span className="text-2xl text-gray-300 line-through">₹{isSingle.oldPrice}</span>
+                                <span className="text-md lg:text-lg text-gray-400 line-through">₹{isSingle.oldPrice}</span>
                             )}
                         </div>
 

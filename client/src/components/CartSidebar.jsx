@@ -35,25 +35,20 @@ function CartSidebar() {
     };
 
     const handleCheckout = async () => {
-
         setLoading(true);
-
         dispatch(closeSidebar());
-
         await new Promise(resolve => setTimeout(resolve, 800));
-
         navigate("/dashboard/orders");
-
         setLoading(false);
     };
 
     return (
         <div
-            className={`fixed right-0 top-0 h-full w-96 bg-white shadow-2xl z-50
+            className={`fixed right-0 top-16 h-11/12 bg-white w-96  shadow-2xl z-50
       transform transition-transform duration-500
       ${sidebar ? "translate-x-0" : "translate-x-full"}`}
         >
-            <div className="p-6 pt-20 flex flex-col h-full">
+            <div className="p-6 pt-5 flex flex-col h-full">
 
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-xl font-bold">My Cart</h2>
