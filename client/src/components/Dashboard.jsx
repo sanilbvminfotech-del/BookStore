@@ -15,7 +15,7 @@ function Dashboard() {
 
         <div className="flex flex-row md:flex-col gap-3 md:gap-4 overflow-x-auto no-scrollbar whitespace-nowrap pb-2 md:pb-0">
           <NavLink to="orders" className={({ isActive }) => `px-3 py-2 rounded-lg text-sm md:text-base font-semibold transition-all ${isActive ? "bg-emerald-600 text-white shadow-md" : "text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"}`}>Orders</NavLink>
-          <NavLink to="likes" className={({ isActive }) => `px-3 py-2 rounded-lg text-sm md:text-base font-semibold transition-all ${isActive ? "bg-emerald-600 text-white shadow-md" : "text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"}`}>Likes</NavLink>
+          {/* <NavLink to="likes" className={({ isActive }) => `px-3 py-2 rounded-lg text-sm md:text-base font-semibold transition-all ${isActive ? "bg-emerald-600 text-white shadow-md" : "text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"}`}>Likes</NavLink> */}
           <NavLink to="change-profile" className={({ isActive }) => `px-3 py-2 rounded-lg text-sm md:text-base font-semibold transition-all ${isActive ? "bg-emerald-600 text-white shadow-md" : "text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"}`}>Settings</NavLink>
           <NavLink to="ordered-list" className={({ isActive }) => `px-3 py-2 rounded-lg text-sm md:text-base font-semibold transition-all ${isActive ? "bg-emerald-600 text-white shadow-md" : "text-gray-600 hover:bg-emerald-50 hover:text-emerald-700"}`}>History</NavLink>
         </div>

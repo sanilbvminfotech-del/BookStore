@@ -5,14 +5,14 @@ function Home() {
   const navigate = useNavigate();
 
   const books = [
-    { id: 1, title: "The Great Adventure", author: "John Carter", price: "$19.99", category: "Fiction", rating: 4.8, image: "TheGreatAdventure.jpg" },
-    { id: 2, title: "Mystery of Time", author: "Emma Stone", price: "$14.99", category: "Mystery", rating: 4.5, image: "MysteryofTime.jpg" },
-    { id: 3, title: "Learning React", author: "David Miller", price: "$29.99", category: "Technology", rating: 4.9, image: "LearningReact.jpg" },
-    { id: 4, title: "Dream Big", author: "Sophia Lee", price: "$24.99", category: "Self-Help", rating: 4.7, image: "DreamBig.avif" },
-    { id: 5, title: "Atomic Habits", author: "James Clear", price: "$18.50", category: "Self-Help", rating: 5.0, image: "AtomicHabits.jpg" },
-    { id: 6, title: "The Silent Patient", author: "Alex Michaelides", price: "$12.00", category: "Thriller", rating: 4.6, image: "TheSilentPatient.jpg" },
-    { id: 7, title: "Space Odyssey", author: "Arthur C. Clarke", price: "$21.99", category: "Science", rating: 4.8, image: "SpaceOdyssey.jpg" },
-    { id: 8, title: "Culinary Arts", author: "Gordon Ramsay", price: "$35.00", category: "Cooking", rating: 4.9, image: "CulinaryArts.jpg" }
+    { id: 1, title: "The Great Adventure", author: "John Carter", price: "₹ 799", category: "Fiction", rating: 4.8, image: "TheGreatAdventure.jpg" },
+    { id: 2, title: "Mystery of Time", author: "Emma Stone", price: "₹ 999", category: "Mystery", rating: 4.5, image: "MysteryofTime.jpg" },
+    { id: 3, title: "Learning React", author: "David Miller", price: "₹ 599", category: "Technology", rating: 4.9, image: "LearningReact.jpg" },
+    { id: 4, title: "Dream Big", author: "Sophia Lee", price: "₹ 499", category: "Self-Help", rating: 4.7, image: "DreamBig.avif" },
+    { id: 5, title: "Atomic Habits", author: "James Clear", price: "₹ 399", category: "Self-Help", rating: 5.0, image: "AtomicHabits.jpg" },
+    { id: 6, title: "The Silent Patient", author: "Alex Michaelides", price: "₹ 559", category: "Thriller", rating: 4.6, image: "TheSilentPatient.jpg" },
+    { id: 7, title: "Space Odyssey", author: "Arthur C. Clarke", price: "₹ 659", category: "Science", rating: 4.8, image: "SpaceOdyssey.jpg" },
+    { id: 8, title: "Culinary Arts", author: "Gordon Ramsay", price: "₹ 669", category: "Cooking", rating: 4.9, image: "CulinaryArts.jpg" }
   ];
 
   const categories = [

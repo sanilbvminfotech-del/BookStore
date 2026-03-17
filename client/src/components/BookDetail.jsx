@@ -131,7 +131,7 @@ function BookDetail() {
                                         onClick={handleAddToCart}
                                         className="flex-1 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-300 text-white font-black py-5 rounded-2xl shadow-xl shadow-emerald-100 flex items-center justify-center gap-3 transition-all active:scale-95"
                                     >
-                                        {buttonLoading ? <CircularProgress size={20} color="inherit" /> : <><ShoppingCartIcon /> Add to Cart</>}
+                                        {buttonLoading ? <CircularProgress size={20} color="inherit" /> : <><ShoppingCartIcon /> <span className='hidden md:block md:text-md'>Add to Cart</span></>}
                                     </button>
                                 ) : (
                                     <div className="flex items-center bg-emerald-50 rounded-2xl border-2 border-emerald-100 overflow-hidden">

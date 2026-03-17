@@ -12,7 +12,7 @@ function AdminCanSeeBookDetails() {
     const dispatch = useDispatch();
 
     const { bookDetail, isLoading, editingField, inputTitle } = useSelector(state => state.admin);
-    console.log('AdminCanSeeBookDetails');
+
 
     useEffect(() => {
         if (id) {
@@ -38,7 +38,6 @@ function AdminCanSeeBookDetails() {
 
 
     const renderFieldForAdmin = (fieldName, value, style) => {
-        console.log('renderFieldForAdmin');
 
         const isEditing = editingField === fieldName
 
@@ -67,7 +66,7 @@ function AdminCanSeeBookDetails() {
                     </div>
                 ) : (
                     <span className="group flex items-center gap-6 ">
-                        <span className={`${style} text-gray-900 tracking-tight leading-tight group-hover:text-emerald-600 transition-colors`}>
+                        <span className={`${style}tracking-tight leading-tight group-hover:text-emerald-600 transition-colors`}>
                             {value}
                         </span>
                         <button
@@ -156,34 +155,33 @@ function AdminCanSeeBookDetails() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                            <div className="p-5 bg-emerald-50 rounded-3xl border border-emerald-100">
-                                <p className="text-[9px] font-black text-emerald-400 uppercase mb-1 tracking-widest">Pricing</p>
-                                <div className="flex items-baseline gap-2 relative">
-                                    <div className="text-xl font-black text-emerald-700 font-mono">
-                                        <span className=''>₹</span>
-                                        {/* {bookDetail.price} */}
+                           
+
+                            <div className='p-5 bg-emerald-50 rounded-3xl border border-emerald-500'>
+                                <p className='text-[10px] font-black uppercase mb-2 text-emerald-400'>Pricing</p>
+                                <div className='flex items-center justify-between'>
+                                    <span className='font-bold text-emerald-500 '>
                                         {renderFieldForAdmin('price', bookDetail?.price, '')}
-                                    </div>
-                                    <div className=' absolute right-0'>
-                                        {bookDetail.oldPrice && <p className="text-xs text-emerald-300 line-through">₹{bookDetail.oldPrice}</p>}
-                                    </div>
-                                    {/* {renderFieldForAdmin('oldPrice', bookDetail?.oldPrice, "text-sm font-black line-through")} */}
+                                    </span>
+                                    <span className='text-emerald-400 text-[15px] line-through'>
+                                        ₹ {bookDetail.oldPrice}
+                                    </span>
                                 </div>
                             </div>
-                            <div className="p-5 bg-amber-50 rounded-3xl border border-amber-100 text-center">
-                                <p className="text-[9px] font-black text-amber-400 uppercase mb-1 tracking-widest">Rating</p>
-                                <div className="flex items-center justify-center gap-2">
+
+                            <div className='p-5 bg-amber-50 rounded-3xl border border-amber-400'>
+                                <p className='text-[10px] font-black uppercase text-amber-400 mb-2'>Rating</p>
+                                <div className='flex items-center gap-2'>
                                     <FaStar className="text-amber-500" />
-                                    <div className="text-2xl font-black text-amber-700">
-                                        {/* {bookDetail.rating?.toFixed(1)} */}
-                                        {renderFieldForAdmin('rating', bookDetail?.rating, "text-md font-light")}
-                                    </div>
+                                    <span className='font-extrabold text-amber-500'>
+                                        {renderFieldForAdmin('rating', bookDetail?.rating, "text-md ")}
+                                    </span>
                                 </div>
                             </div>
-                            <div className="p-5 bg-blue-50 rounded-3xl border border-blue-100 text-center">
-                                <p className="text-[9px] font-black text-blue-400 uppercase mb-1 tracking-widest">Stock</p>
-                                <div className={`text-xl font-black ${bookDetail.stock < 10 ? "text-red-600" : "text-blue-700"}`}>
-                                    {/* {bookDetail.stock} */}
+
+                            <div className='p-5 bg-blue-50 rounded-3xl border border-blue-400'>
+                                <p className='text-[10px] font-black uppercase text-blue-400 mb-1'>Stock</p>
+                                <div className={`text-xl font-black ${bookDetail?.stock < 10 ? "text-red-600" : "text-blue-600"}`}>
                                     {renderFieldForAdmin('stock', bookDetail?.stock, "text-sm font-slim")}
                                 </div>
                             </div>
