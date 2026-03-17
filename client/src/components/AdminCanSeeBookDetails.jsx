@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { adminCanSeeSingleBookDetailsAPI, clickOnEditButtonAdmin, onChangeEvent, editTitleAdminAPI, clearEditAdmin } from '../slices/adminSlice';
 import { FaArrowLeft, FaStar, FaCalendarAlt, FaPenNib, FaFire, FaMoneyBillWave, FaEdit, FaCheck, FaTimes } from "react-icons/fa";
-import EditableField from './EditableField';
 
 function AdminCanSeeBookDetails() {
     const { id } = useParams();
@@ -130,17 +129,23 @@ function AdminCanSeeBookDetails() {
                             </div>
 
 
+
+
+
                             {/* <div className="flex justify-between items-center mb-6 border-b border-gray-50 pb-2">
                                 <div className="flex items-center gap-2">
                                     {renderFieldForAdmin('category', bookDetail?.category, "text-[10px] font-black text-emerald-600 uppercase tracking-[0.2em] w-auto")}
                                     <span className="text-gray-500">•</span>
                                     {renderFieldForAdmin('genre', bookDetail?.genre, "text-[10px] font-black text-emerald-600 uppercase tracking-[0.2em] w-auto")}
                                 </div>
-
                                 <span className="text-[10px] font-bold text-gray-400 tracking-widest bg-gray-100 px-2 py-1 rounded">
                                     ID: {bookDetail.bookID}
                                 </span>
                             </div> */}
+
+
+
+
 
                             <div className="min-h-20 flex items-center mb-4 ">
                                 {renderFieldForAdmin('title', bookDetail?.title, "text-xl font-black md:text-2xl lg:text-4xl")}
@@ -155,8 +160,6 @@ function AdminCanSeeBookDetails() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-                           
-
                             <div className='p-5 bg-emerald-50 rounded-3xl border border-emerald-500'>
                                 <p className='text-[10px] font-black uppercase mb-2 text-emerald-400'>Pricing</p>
                                 <div className='flex items-center justify-between'>

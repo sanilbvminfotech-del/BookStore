@@ -87,7 +87,7 @@ function Header() {
                     <img
                         alt="user"
                         src={user?.image ? `https://bookstore-ybgj.onrender.com/image/UserImage/${user.image}` : `https://bookstore-ybgj.onrender.com/image/UserImage/default.jpg`}
-                        className="size-8 rounded-full object-cover border border-gray-100 hidden sm:block"
+                        className="size-9 rounded-full object-cover border border-gray-600 hidden sm:block"
                     />
 
                     {isAuthenticated ? (

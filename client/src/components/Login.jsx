@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUserAPI } from "../slices/userSlice";
 import * as Yup from 'yup';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 
 function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -11,6 +14,8 @@ function Login() {
   const [showPassword, setShowPassword] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [openEye, setOpenEye] = useState(false)
+  // console.log(openEye,'openEye');
 
   const { isLoading, isError } = useSelector((state) => state.user);
 
@@ -84,18 +89,24 @@ function Login() {
               onChange={handleChange}
               value={formData.email}
             />
-            <TextField
-              fullWidth
-              variant="outlined"
-              error={!!errors.password}
-              helperText={errors.password}
-              name="password"
-              type={showPassword ? "text" : "password"}
-              label="Password"
-              onClick={() => setShowPassword(prev => !prev)}
-              onChange={handleChange}
-              value={formData.password}
-            />
+            <div className="relative">
+              <TextField
+                fullWidth
+                variant="outlined"
+                error={!!errors.password}
+                helperText={errors.password}
+                name="password"
+                type={openEye ? "text" : "password"}
+                label="Password"
+                onClick={() => setShowPassword(prev => !prev)}
+                onChange={handleChange}
+                value={formData.password}
+              />
+              <span onClick={() => setOpenEye(!openEye)} className="absolute top-0 right-0 h-full  w-10">
+                {openEye ? <FaEye className=" top-0 right-6  h-full w-5 " /> : <FaEyeSlash  className=" top-0 right-6  h-full w-5 " />}
+              </span>
+            </div>
+
           </div>
 
           <div className="pt-2">
