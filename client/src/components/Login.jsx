@@ -92,13 +92,14 @@ function Login() {
             <div className="relative">
               <TextField
                 fullWidth
+                autoComplete="true"
                 variant="outlined"
                 error={!!errors.password}
                 helperText={errors.password}
                 name="password"
                 type={openEye ? "text" : "password"}
                 label="Password"
-                onClick={() => setShowPassword(prev => !prev)}
+                // onClick={() => setShowPassword(prev => !prev)}
                 onChange={handleChange}
                 value={formData.password}
               />
@@ -106,7 +107,6 @@ function Login() {
                 {openEye ? <FaEye className=" top-0 right-6  h-full w-5 " /> : <FaEyeSlash  className=" top-0 right-6  h-full w-5 " />}
               </span>
             </div>
-
           </div>
 
           <div className="pt-2">
