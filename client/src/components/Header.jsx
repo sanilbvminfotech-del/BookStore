@@ -15,13 +15,16 @@ function Header() {
     const dispatch = useDispatch();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
-
+    // const [openImage, setOpenImage] = useState(false)
     const cartItems = useSelector(state => state.cart?.cart?.items || []);
     const { user } = useSelector((state) => state.user);
     const isAuthenticated = !!sessionStorage.getItem('accessToken');
     const newCount = isAuthenticated ? cartItems.reduce((acc, item) => acc + item.quantity, 0) : 0;
-
+    // console.log(openImage, 'openImage');
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [currentImageUrl, setCurrentImageUrl] = useState('');
     const open = Boolean(anchorEl);
+
 
     const handleClick = (event) => setAnchorEl(event.currentTarget);
     const handleMenuNavigation = (page) => {
@@ -29,6 +32,17 @@ function Header() {
         setAnchorEl(null);
         setMobileMenuOpen(false);
     };
+
+
+    const handleOpenImage = (url) => {
+        setCurrentImageUrl(url)
+        setModalIsOpen(!modalIsOpen)
+        // document.body.style.overflow = 'hidden';
+        // document.body.style.height = "50px"
+        // document.body.style.width = "50px"
+        // document.body.style.backgroundColor = '#FFA765';
+    }
+
 
     const handleLogout = async () => {
         try {
@@ -84,11 +98,34 @@ function Header() {
                         )}
                     </div>
 
-                    <img
+                    <div className="relative inline-block">
+                        <img
+                            alt="user"
+                            src={user?.image ? `https://bookstore-ybgj.onrender.com/image/UserImage/${user.image}` : `https://bookstore-ybgj.onrender.com/image/UserImage/default.jpg`}
+                            className="size-9 rounded-full object-cover border border-gray-200"
+                        />
+
+                        {user?.image ? <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-glow"></span> : <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white"></span>}
+                    </div>
+
+
+                    {/* <div className="relative inline-block">
+                        <img
+                            alt="user"
+                            onClick={() => handleOpenImage(user?.image)}
+                            src={user?.image ? `https://bookstore-ybgj.onrender.com/image/UserImage/${user.image}` : `https://bookstore-ybgj.onrender.com/image/UserImage/default.jpg`}
+                            className="size-9 cursor-pointer rounded-full object-cover border border-gray-200 shadow-sm transition-transform active:scale-95"
+                        />
+                        <span className={`absolute top-0 right-0 block w-3 h-3 rounded-full border-2 border-white ${user?.image ? 'bg-emerald-500 animate-status-pulse' : 'bg-rose-500'} `}></span>
+                    </div> */}
+
+
+                    {/* <img
                         alt="user"
+                        onClick={() => handleOpenImage(user?.image)}
                         src={user?.image ? `https://bookstore-ybgj.onrender.com/image/UserImage/${user.image}` : `https://bookstore-ybgj.onrender.com/image/UserImage/default.jpg`}
-                        className="size-9 rounded-full object-cover border border-gray-600 hidden sm:block"
-                    />
+                        className="size-9 cursor-pointer rounded-full object-cover border border-gray-600 hidden sm:block"
+                    /> */}
 
                     {isAuthenticated ? (
                         <button onClick={handleLogout} className='text-xs sm:text-sm font-bold text-white bg-red-500 px-3 sm:px-4 py-2 rounded-lg'>

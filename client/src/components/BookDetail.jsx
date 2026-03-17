@@ -25,7 +25,7 @@ function BookDetail() {
 
     const itemInCart = cartItems.find(item => (item.book?._id || item.book) === id);
     const currentQty = itemInCart ? itemInCart?.quantity : 0;
-    console.log(currentQty, 'currentQty-currentQty');
+    // console.log(currentQty, 'currentQty-currentQty');
 
 
     useEffect(() => {

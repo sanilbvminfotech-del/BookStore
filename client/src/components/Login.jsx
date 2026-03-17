@@ -93,7 +93,6 @@ function Login() {
               <TextField
                 fullWidth
                 className="z-10 p-10 border"
-                autoComplete="true"
                 variant="outlined"
                 error={!!errors.password}
                 helperText={errors.password}
